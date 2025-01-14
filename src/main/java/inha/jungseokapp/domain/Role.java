@@ -1,4 +1,4 @@
-package com.example.libraryinha.domain;
+package inha.jungseokapp.domain;
 
 public enum Role {
     USER,

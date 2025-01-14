@@ -1,8 +1,7 @@
-package com.example.libraryinha.controller;
-
-import com.example.libraryinha.domain.UserEntity;
-import com.example.libraryinha.dto.LoginDTO;
-import com.example.libraryinha.repository.UserRepository;
+package inha.jungseokapp.controller;
+import inha.jungseokapp.domain.UserEntity;
+import inha.jungseokapp.dto.LoginDTO;
+import inha.jungseokapp.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

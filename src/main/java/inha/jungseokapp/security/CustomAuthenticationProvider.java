@@ -1,6 +1,6 @@
-package com.example.libraryinha.security;
+package inha.jungseokapp.security;
 
-import com.example.libraryinha.service.CustomUserDetailsService;
+import inha.jungseokapp.service.CustomUserDetailsService;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;

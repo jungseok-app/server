@@ -1,4 +1,4 @@
-package com.example.libraryinha.security;
+package inha.jungseokapp.security;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;

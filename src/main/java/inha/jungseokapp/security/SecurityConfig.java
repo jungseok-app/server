@@ -1,6 +1,6 @@
-package com.example.libraryinha.security;
+package inha.jungseokapp.security;
 
-import com.example.libraryinha.service.CustomUserDetailsService;
+import inha.jungseokapp.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

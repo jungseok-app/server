@@ -1,8 +1,8 @@
-package com.example.libraryinha.service;
+package inha.jungseokapp.service;
 
-import com.example.libraryinha.domain.UserEntity;
-import com.example.libraryinha.dto.CustomUserDetails;
-import com.example.libraryinha.repository.UserRepository;
+import inha.jungseokapp.domain.UserEntity;
+import inha.jungseokapp.dto.CustomUserDetails;
+import inha.jungseokapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

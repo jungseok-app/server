@@ -1,5 +1,4 @@
-package com.example.libraryinha.domain;
-
+package inha.jungseokapp.domain;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

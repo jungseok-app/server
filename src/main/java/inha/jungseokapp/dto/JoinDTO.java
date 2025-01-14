@@ -1,5 +1,4 @@
-package com.example.libraryinha.dto;
-
+package inha.jungseokapp.dto;
 import lombok.Getter;
 import lombok.Setter;
 

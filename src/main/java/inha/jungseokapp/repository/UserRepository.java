@@ -1,6 +1,6 @@
-package com.example.libraryinha.repository;
+package inha.jungseokapp.repository;
 
-import com.example.libraryinha.domain.UserEntity;
+import inha.jungseokapp.domain.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

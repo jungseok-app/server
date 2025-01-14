@@ -1,9 +1,9 @@
-package com.example.libraryinha.service;
+package inha.jungseokapp.service;
 
-import com.example.libraryinha.domain.Role;
-import com.example.libraryinha.domain.UserEntity;
-import com.example.libraryinha.dto.JoinDTO;
-import com.example.libraryinha.repository.UserRepository;
+import inha.jungseokapp.domain.Role;
+import inha.jungseokapp.domain.UserEntity;
+import inha.jungseokapp.dto.JoinDTO;
+import inha.jungseokapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

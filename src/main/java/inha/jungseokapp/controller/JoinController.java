@@ -1,7 +1,7 @@
-package com.example.libraryinha.controller;
+package inha.jungseokapp.controller;
 
-import com.example.libraryinha.dto.JoinDTO;
-import com.example.libraryinha.service.JoinService;
+import inha.jungseokapp.dto.JoinDTO;
+import inha.jungseokapp.service.JoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

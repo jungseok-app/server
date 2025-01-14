@@ -1,6 +1,6 @@
-package com.example.libraryinha.security;
+package inha.jungseokapp.security;
 
-import com.example.libraryinha.dto.LoginDTO;
+import inha.jungseokapp.dto.LoginDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

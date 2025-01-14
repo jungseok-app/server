@@ -1,7 +1,7 @@
-package com.example.libraryinha.dto;
+package inha.jungseokapp.dto;
 
 
-import com.example.libraryinha.domain.UserEntity;
+import inha.jungseokapp.domain.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
