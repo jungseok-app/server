@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-@RestController  // @Controller에서 @RestController로 변경
+@RestController
 public class LoginController {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
