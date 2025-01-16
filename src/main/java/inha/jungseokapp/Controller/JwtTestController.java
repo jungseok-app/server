@@ -1,8 +1,8 @@
-package java.ldrugsnw.example.jwt.Controller;
+package inha.jungseokapp.Controller;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.ldrugsnw.example.jwt.jwt.JwtTokenProvider;
+import inha.jungseokapp.jwt.JwtTokenProvider;
 
 @RestController
 @RequestMapping("/test")

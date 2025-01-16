@@ -1,4 +1,4 @@
-package java.ldrugsnw.example.jwt.jwt;
+package inha.jungseokapp.jwt;
 
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;

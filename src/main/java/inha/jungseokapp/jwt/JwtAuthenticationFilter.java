@@ -1,4 +1,4 @@
-package java.ldrugsnw.example.jwt.jwt;
+package inha.jungseokapp.jwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;

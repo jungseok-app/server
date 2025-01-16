@@ -1,4 +1,4 @@
-package java.ldrugsnw.example.jwt.config;
+package inha.jungseokapp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -6,8 +6,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import java.ldrugsnw.example.jwt.jwt.JwtAuthenticationFilter;
-import java.ldrugsnw.example.jwt.jwt.JwtTokenProvider;
+import inha.jungseokapp.jwt.JwtAuthenticationFilter;
+import inha.jungseokapp.jwt.JwtTokenProvider;
 
 @Configuration
 public class SecurityConfig {

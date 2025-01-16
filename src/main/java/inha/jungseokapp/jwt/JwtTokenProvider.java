@@ -1,4 +1,4 @@
-package java.ldrugsnw.example.jwt.jwt;
+package inha.jungseokapp.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
