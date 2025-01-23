@@ -1,5 +1,8 @@
-package inha.jungseokapp.security;
+package inha.jungseokapp.config;
 
+import inha.jungseokapp.jwt.JwtAuthenticationFilter;
+import inha.jungseokapp.jwt.JwtTokenProvider;
+import inha.jungseokapp.security.CustomAuthenticationProvider;
 import inha.jungseokapp.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -21,11 +24,14 @@ public class SecurityConfig {
 
     private final CustomUserDetailsService userDetailsService;
     private final AuthenticationConfiguration authenticationConfiguration;
+    private final JwtTokenProvider jwtTokenProvider;
 
     public SecurityConfig(CustomUserDetailsService userDetailsService,
-                          AuthenticationConfiguration authenticationConfiguration) {
+                          AuthenticationConfiguration authenticationConfiguration,
+                          JwtTokenProvider jwtTokenProvider) {
         this.userDetailsService = userDetailsService;
         this.authenticationConfiguration = authenticationConfiguration;
+        this.jwtTokenProvider = jwtTokenProvider;
     }
 
     @Bean
@@ -45,37 +51,28 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {  // 메소드 이름을 filterChain으로 변경
-        // 공통 설정
-        applyCommonSettings(http);
 
-        // 세션 설정
-        http.sessionManagement(session ->
-                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        );
+        http
+                //세션
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 
-        // 인증 프로바이더 설정
-        http.authenticationProvider(authenticationProvider());
 
-//        // CustomAuthenticationFilter 추가
-//        CustomAuthenticationFilter authFilter = new CustomAuthenticationFilter(
-//                authenticationManager(authenticationConfiguration)
-//        );
-//        http.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
+                .csrf(csrf -> csrf.disable())
+                .formLogin(form -> form.disable())
+                .httpBasic(basic -> basic.disable())
 
-        // 권한 설정
-        http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "/join", "/public/**").permitAll()
-                .requestMatchers("/admin/**").hasRole("ADMIN")
-                .anyRequest().authenticated()
-        );
+                .authenticationProvider(authenticationProvider())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/login", "/join", "/public/**",
+                                "/test/token", "/test/validate").permitAll()
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .anyRequest().authenticated()
+                )
+                //jwt 필터
+                .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider),
+                        UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
-
-    private void applyCommonSettings(HttpSecurity http) throws Exception {
-        http
-                .csrf(csrf -> csrf.disable())
-                .formLogin(form -> form.disable())
-                .httpBasic(basic -> basic.disable());
-    }
 }
+
